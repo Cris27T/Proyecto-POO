@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">        <script src="https://kit.fontawesome.com/3719664996.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="icon/jpg" href="../landing-page/frontend-landing-page/img/Lightning_moto.png" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="frontend-landing-page/css/styles.css">
+
+        <title>Lightning Delivery</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav-logo a-oscuro">Lightning Delivery</a>
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-lista">
+                        <div><li class="nav-item"><img class="nav-logo " src="frontend-landing-page/img/Lightning_logo_banner_blanco.png" alt=""></li>
+                        </div>
+                        <li class="nav-item" id="btn-menu-motoristas" style="display: block;"><a href="#motoristas" class="nav-link a-blanco">Motoristas/Repartidores</a></li>
+                        <li class="nav-item" id="btn-menu-motoristas" style="display: block;"><a href="#motoristas" class="nav-link a-blanco">Registrarse</a></li>
+                        <li class="nav-item" id="btn-menu-iniciar-sesion" style="display: block;"><a href="#iniciar-sesion" class="nav-link a-blanco">Iniciar sesión</a></li>
+                        <li class="nav-item" id="btn-menu-cerrar-sesion" style="display: none;"><a href="../landing-page/index.html" class="nav-link a-blanco">Cerrar sesión</a></li>
+                        <li class="nav-item" id="vista-usuario" style="display: none;"></li>
+
+                    </ul>
+                </div>
+
+                <div class="nav-burger" id="nav-burger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== login =====-->
+            <section class="login bd-grid" id="login" style="display: block;">
+                <div class="login-data">
+                    <h1 class="login-titulo">¿Necesitas algo?<br><span class="login-titulo-color">Estás en el lugar<br> indicado</span></h1>
+
+                    <a href="#iniciar-sesion" type="button" class="button a-blanco " id="btn-iniciar-sesion" >Iniciar Sesión</a>
+                </div>
+                <div class="login-imagen col-12">    
+                    <img class="col-12" src="frontend-landing-page/img/landing-logo.png" alt="">
+                </div>
+                
+                <div class="login-store" style="margin-top: 50px;">
+                    <a href="#" class="store"><img src="frontend-landing-page/img/playstore-download.png" alt=""></i></a>
+                    <a href="#" class="store"><img src="frontend-landing-page/img/appstore -download.png" alt=""></i></a>
+                </div>
+            </section>
+
+            
+            <!--===== categorias =====-->
+            <section class="categorias section" id="categorias" style="display: none; padding-top: 5px;">
+                <h2 class="section-title">Categorias</h2>   
+
+                <div class="categorias-container bd-grid">
+                    <a href="#">
+                        <div class="categorias-img" onclick="mostrarRestaurantes()" >
+                            <img src="frontend-landing-page/img/comida.jpg" alt="">
+                            <div class="categorias-texto">Comidas</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="categorias-img" onclick="mostrarFarmacias()">
+                            <img src="frontend-landing-page/img/salud.jpg" alt="">
+                            <div class="categorias-texto">Salud</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="categorias-img" onclick="mostrarMarket()">
+                            <img src="frontend-landing-page/img/supermercado.jpg" alt="">
+                            <div class="categorias-texto">Market</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="categorias-img">
+                            <img src="frontend-landing-page/img/regalos.jpg" alt="">
+                            <div class="categorias-texto">Regalos</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="categorias-img">
+                            <img src="frontend-landing-page/img/bebidas.jpg" alt="">
+                            <div class="categorias-texto">Bebidas</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="categorias-img">
+                            <img src="frontend-landing-page/img/mandados.jpg" alt="">
+                            <div class="categorias-texto">Mandados</div>
+                        </div>
+                    </a>
+                </div>
+                    <!-- boton regresar atras -->
+                <div class="footer-icon" style="margin-top: 30px;" >
+                    <a href="../landing-page/index.html" class="footer-icon " style="color: var(--color-primario);"><i class="fas fa-angle-double-left"></i></a>    
+                </div>
+            </section>
+
+            
+
+            <!--===== iniciar-sesion =====-->
+            <div >
+            <section class="iniciar-sesion-seccion" id="iniciar-sesion" style="display: block;" >
+                <h2 class="section-title">Iniciar Sesión</h2>
+
+                <div class="iniciar-sesion-container" style="justify-content: center;">
+                    <form action="" class="iniciar-sesion-form col-10">
+                        <input type="text" placeholder="Usuario" class="iniciar-sesion-input">
+                        <input type="password" placeholder="Contraseña" class="iniciar-sesion-input">
+                        <input onclick="mostrarAcceso()" style="margin-bottom: 20px; margin-right:5px" type="button" value="Enviar" class="iniciar-sesion-button button">
+                    </form>
+                </div>
+            </section>
+            </div>
+        </main>
+
+
+
+        <!--===== comidas / restaurantes =====-->
+        <section class="comidas section" id="comidas" style="display: none; padding-top: 5px;">
+            <h2 class="section-title">Restaurantes</h2>   
+
+            <div class="categorias-container bd-grid">
+                <a href="#">
+                    <div class="categorias-img" onclick="mostrarProductos()">
+                        <img src="frontend-landing-page/img/burger-king.jpg" alt="">
+                        <div class="categorias-texto">Burger <br>King</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/mc-donalds.jpg" alt="">
+                        <div class="categorias-texto">MC Donalds</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/china-gardens.jpg" alt="">
+                        <div class="categorias-texto">China Gardens</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/dunkin-donuts.jpg" alt="">
+                        <div class="categorias-texto">Dunkin Donuts</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/asados.jpg" alt="">
+                        <div class="categorias-texto">Asados El Gordo</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/grano-de-oro.jpg" alt="">
+                        <div class="categorias-texto">Grano de Oro</div>
+                    </div>
+                </a>
+            </div>
+            <!-- boton regresar atras -->
+        <div class="footer-icon" style="margin-top: 30px;" onclick="mostrarAcceso()">
+            <a href="#" class="footer-icon " style="color: var(--color-primario);"><i class="fas fa-angle-double-left"></i></a>    
+        </div>
+
+        </section>
+
+        <!--===== salud / farmacias =====-->
+        <section class="salud section" id="salud" style="display: none; padding-top: 5px;">
+            <h2 class="section-title">Farmacias</h2>   
+
+            <div class="categorias-container bd-grid">
+                <a href="#">
+                    <div class="categorias-img" >
+                        <img src="frontend-landing-page/img/siman.jpg" alt="">
+                        <div class="categorias-texto">Farmacia Simán</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/del-ahorro.jpg" alt="">
+                        <div class="categorias-texto">Farmacia Del Ahorro</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/kielsa.jpg" alt="">
+                        <div class="categorias-texto">Farmacia Kielsa</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/regis.jpg" alt="">
+                        <div class="categorias-texto">Farmacia Regis</div>
+                    </div>
+                </a>
+            </div>
+            <!-- boton regresar atras -->
+            <div class="footer-icon" style="margin-top: 30px;" onclick="mostrarAcceso()">
+                <a href="#" class="footer-icon " style="color: var(--color-primario);"><i class="fas fa-angle-double-left"></i></a>    
+            </div>
+
+        </section>
+
+
+        <!--===== market / supermercados =====-->
+        <section class="salud section" id="market" style="display: none; padding-top: 5px;">
+            <h2 class="section-title">Supermercados</h2>   
+
+            <div class="categorias-container bd-grid">
+                <a href="#">
+                    <div class="categorias-img" >
+                        <img src="frontend-landing-page/img/despensa-familiar.jpg" alt="">
+                        <div class="categorias-texto">Despensa</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/diprova.jpg" alt="">
+                        <div class="categorias-texto">Diprova</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/pricesmart.jpg" alt="">
+                        <div class="categorias-texto">Pricesmart</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/la-colonia.jpg" alt="">
+                        <div class="categorias-texto">La Colonia</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/walmart.jpg" alt="">
+                        <div class="categorias-texto">Walmart</div>
+                    </div>
+                </a>
+            </div>
+            <!-- boton regresar atras -->
+            <div class="footer-icon" style="margin-top: 30px;" onclick="mostrarAcceso()">
+                <a href="#" class="footer-icon " style="color: var(--color-primario);"><i class="fas fa-angle-double-left"></i></a>    
+            </div>
+
+        </section>
+
+        <!--===== productos =====-->
+        <section class="salud section" id="productos-burger" style="display: none; padding-top: 5px;">
+            <h2 class="section-title">Burger King</h2>   
+
+            <div class="categorias-container bd-grid">
+                <a href="#">
+                    <div class="categorias-img" >
+                        <img src="frontend-landing-page/img/combo-1.jpg" alt="">
+                        <div class="categorias-texto">Combo 1</div>
+                        <div class="categorias-texto">L.99.99</div>
+                        <div class="categorias-texto"><i class="fas fa-shopping-cart" style="color: var(--color-primario)"></i></div>
+                        
+
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/combo-2.jpg" alt="">
+                        <div class="categorias-texto">Combo 2</div>
+                        <div class="categorias-texto">L.99.99</div>
+                        <div class="categorias-texto"><i class="fas fa-shopping-cart" style="color: var(--color-primario)"></i></div>
+                        
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/combo-3.jpg" alt="">
+                        <div class="categorias-texto">Combo 3</div>
+                        <div class="categorias-texto">L.99.99</div>
+                        <div class="categorias-texto"><i class="fas fa-shopping-cart" style="color: var(--color-primario)"></i></div>
+
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categorias-img">
+                        <img src="frontend-landing-page/img/combo-4.jpg" alt="">
+                        <div class="categorias-texto">Combo 4</div>
+                        <div class="categorias-texto">L.99.99</div>
+                        <div class="categorias-texto"><i class="fas fa-shopping-cart" style="color: var(--color-primario)"></i></div>
+                    </div>
+                </a>
+            </div>
+            <!-- boton regresar atras -->
+            <div class="footer-icon" style="margin-top: 30px;" onclick="mostrarRestaurantes()">
+                <a href="#" class="footer-icon " style="color: var(--color-primario);"><i class="fas fa-angle-double-left"></i></a>    
+            </div>
+
+        </section>
+
+        
+
+        <!--===== FOOTER =====-->
+        <footer class="footer" id="pie-de-pagina">
+            <p class="footer-title">Lightning Delivery</p>
+            <div class="footer-social">
+                <a href="#" class="footer-icon a-blanco"><i class="fab fa-facebook"></i></i></a>
+                <a href="#" class="footer-icon a-blanco"><i class="fab fa-instagram"></i></i></a>
+                <a href="#" class="footer-icon a-blanco"><i class="fab fa-twitter"></i></i></a>
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== Controlador JS =====-->
+        <script src="frontend-landing-page/js/controlador.js"></script>
+    </body>
+</html>
