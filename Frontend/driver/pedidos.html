@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/Logo.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7de21ae1b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="menu">
+        <table border="0" cellspacing="0" class="menu-table">
+            <tbody>
+                <tr>
+                    <td class="menu-logo"></td>
+                    <td class="menu-link-td"><a class="menu-link" href="index.html">Inicio</a></td>
+                    <td class="menu-link-td"><a class="menu-link" href="">Usuarios</a></td>
+                    <td class="menu-link-td"><a class="menu-link" href="comercios.html">Comercios</a></td>
+                    <td class="menu-link-td"><a class="menu-link" href="pedidos.html">Pedidos</a></td>
+                    <td>
+                        <a class="menu-link" href="login.html">
+                            <img class="perfil" src="img/usuarios/usuario.png" ></img>
+                        </a>
+                    </td>
+                    <td>
+                        <a class="menu-oculto" href="">
+                            <i class="fas fa-align-justify" style="color: aliceblue;"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <main>
+        <table cellspacing="0" class="lista-pedidos">
+            <tbody>
+                <tr>
+                    <td>
+                        <table cellspacing="0" class="lista-arreglos">
+                            <tbody id="pedidos">
+                                
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+    </footer>
+    
+
+    <script src="js/controladorPedidos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
